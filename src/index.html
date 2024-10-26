@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Abreu</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap");
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: "Raleway", sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+      }
+
+      .container {
+        text-align: center;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #666;
+        margin-top: 0;
+      }
+
+      .highlight {
+        display: inline-block;
+        position: relative;
+      }
+
+      .highlight::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background-color: #3498db;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .container:hover .highlight::after {
+        transform: scaleX(1);
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><span class="highlight">Mark Abreu</span></h1>
+      <p class="subtitle">Hola mundo desde Ngnix</p>
+    </div>
+  </body>
+</html>
